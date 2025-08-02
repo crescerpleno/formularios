@@ -1,104 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Registro Diário - Plano de Ruminação</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f8fb;
-      margin: 40px;
-    }
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-    }
-    form {
-      max-width: 600px;
-      margin: auto;
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #2980b9;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #1f6391;
-    }
-  </style>
-</head>
-<body>
-  <h1>Registro Diário - Plano Semanal de Ruminação</h1>
-  <form id="registroForm">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required>
+# 🧠 Landing Page – Plano Semanal de Redução da Ruminação
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+Esta landing page foi criada para registrar atividades diárias relacionadas ao plano semanal de enfrentamento da ruminação, com integração ao Google Sheets e envio automático de e-mail de confirmação.
 
-    <label for="dia">Dia da Semana:</label>
-    <select id="dia" name="dia" required>
-      <option value="">Selecione...</option>
-      <option value="Segunda-feira">Segunda-feira</option>
-      <option value="Terça-feira">Terça-feira</option>
-      <option value="Quarta-feira">Quarta-feira</option>
-      <option value="Quinta-feira">Quinta-feira</option>
-      <option value="Sexta-feira">Sexta-feira</option>
-      <option value="Sábado">Sábado</option>
-      <option value="Domingo">Domingo</option>
-    </select>
+---
 
-    <label for="atividade">Atividade Realizada:</label>
-    <input type="text" id="atividade" name="atividade" required>
+## ✅ Funcionalidades
 
-    <label for="observacoes">Observações:</label>
-    <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+- Formulário com campos para:
+  - Nome
+  - E-mail
+  - Dia da semana
+  - Atividade realizada
+  - Observações
 
-    <button type="submit">Enviar Registro</button>
-  </form>
-
-  <script>
-    document.getElementById("registroForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const formData = {
-        nome: document.getElementById("nome").value,
-        email: document.getElementById("email").value,
-        dia: document.getElementById("dia").value,
-        atividade: document.getElementById("atividade").value,
-        observacoes: document.getElementById("observacoes").value
-      };
-
-      fetch("https://script.google.com/macros/s/AKfycbxsJgE-ftdxaWTpn9_86gfCgXgkNqD6oiyo30KN3I_AtoxoKmEasOhVyD6inG-4pQ53/exec", {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      })
-      .then(response => response.json())
-      .then(data => alert("Registro enviado com sucesso!"))
-      .catch(error => alert("Erro ao enviar registro."));
-    });
-  </script>
-</body>
-</html>
+- Integração com Google Sheets via Google Apps Script
+- Envio automático de e-mail de confirmação para o usuário
+- Layout responsivo e pronto para publicação via GitHub Pages

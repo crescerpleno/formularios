@@ -10,6 +10,6 @@ Facilitar o acompanhamento das atividades diárias e reflexões semanais por mei
 
 Você pode acessar o formulário diretamente pelo link abaixo:
 
-🔗 [Registro Diário - Ruminação](https://crescerpleno.github.io/formularios/respostas.html)
+🔗 [Respostas diarias - Ruminação](https://crescerpleno.github.io/formularios/respostas.html)
 
 🔗 [Registro Diário - Ruminação](https://crescerpleno.github.io/formularios/LandingPage_Ruminacao_Formulario_implantacao.html)

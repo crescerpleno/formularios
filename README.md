@@ -1,6 +1,6 @@
 # 🧠 Registro Diário - Plano de Ruminação
 
-Este projeto é uma **landing page** para o registro diário e semanal de atividades relacionadas ao plano de ruminação, voltado para o autoconhecimento e desenvolvimento pessoal.
+Registro diário e semanal de atividades relacionadas ao plano de ruminação, voltado para o autoconhecimento e desenvolvimento pessoal.
 
 ## 📋 Objetivo
 
@@ -10,6 +10,4 @@ Facilitar o acompanhamento das atividades diárias e reflexões semanais por mei
 
 Você pode acessar o formulário diretamente pelo link abaixo:
 
-🔗 [Respostas diarias - Ruminação](https://crescerpleno.github.io/formularios/respostas.html)
-
-🔗 [Registro Diário - Ruminação](https://crescerpleno.github.io/formularios/LandingPage_Ruminacao_Formulario_implantacao.html)
+🔗 [Registro diário - Ruminação](https://crescerpleno.github.io/formularios/Ruminacao.html)

@@ -5,63 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário de Registro</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #f4f4f4;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    form {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    label {
-      display: block;
-      margin: 10px 0 5px;
-      font-weight: bold;
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      background-color: #28a745;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #218838;
-    }
-    #response {
-      margin-top: 20px;
-      text-align: center;
-      color: #333;
-    }
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; background-color: #f4f4f4; }
+    h1 { text-align: center; color: #333; }
+    form { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+    label { display: block; margin: 10px 0 5px; font-weight: bold; }
+    input, textarea, select { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    button { width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background-color: #218838; }
   </style>
 </head>
 <body>
   <h1>Formulário de Registro</h1>
-  <form id="registroForm" action="https://script.google.com/macros/s/AKfycbzeQc_g4pQyCX7ie53Oc10A0emdzKz8pbv-Pc4k3NY9uVzZB3H5EE7v0O7Uu5ByhWUNTw/exec" method="POST">
+  <form action="https://script.google.com/macros/s/AKfycbzeQc_g4pQyCX7ie53Oc10A0emdzKz8pbv-Pc4k3NY9uVzZB3H5EE7v0O7Uu5ByhWUNTw/exec" method="POST">
     <label for="nome">Nome:</label>
     <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" placeholder="Digite seu email" required>
-
     <label for="diaSemana">Dia da Semana:</label>
     <select id="diaSemana" name="diaSemana" required>
       <option value="">Selecione um dia</option>
@@ -73,38 +32,11 @@
       <option value="Sábado">Sábado</option>
       <option value="Domingo">Domingo</option>
     </select>
-
     <label for="atividade">Atividade:</label>
     <input type="text" id="atividade" name="atividade" placeholder="Digite a atividade" required>
-
     <label for="observacoes">Observações:</label>
     <textarea id="observacoes" name="observacoes" placeholder="Digite suas observações"></textarea>
-
     <button type="submit">Enviar</button>
   </form>
-  <div id="response"></div>
-
-  <script>
-    document.getElementById('registroForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Impede o comportamento padrão do formulário
-
-      const form = event.target;
-      const formData = new FormData(form);
-      const responseDiv = document.getElementById('response');
-
-      fetch(form.action, {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.text())
-      .then(data => {
-        responseDiv.innerHTML = `<p style="color: green;">${data}</p>`;
-        form.reset(); // Limpa o formulário após o envio
-      })
-      .catch(error => {
-        responseDiv.innerHTML = `<p style="color: red;">Erro ao enviar: ${error.message}</p>`;
-      });
-    });
-  </script>
 </body>
 </html>
